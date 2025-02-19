@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP on Optimization Energy Efficiency in Uttarakhand</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather Sans', sans-serif;
+            background: #313944;
+            color: #FFF;
+            margin: 0;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #464D56;
+            padding: 10px 20px;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .project-title {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            width: 320px;
+            background: #464D56;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+
+        .input-row {
+            display: flex;
+            align-items: center;
+            background: #38424F;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .input-row i {
+            color: white;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .input-row input, .input-row select {
+            flex: 1;
+            background: none;
+            border: none;
+            color: white;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .button {
+            width: 100%;
+            background: #F0793F;
+            color: #FFF;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0px 0px 2px 2px #363840;
+            border: none;
+        }
+
+        .button:hover {
+            background: #EA5912;
+        }
+
+        .toggle-link {
+            text-align: center;
+            color: #CCC;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .toggle-link a {
+            color: #F0793F;
+            text-decoration: none;
+        }
+
+        .toggle-link a:hover {
+            text-decoration: underline;
+        }
+
+        select:focus option {
+            background: #F0793F;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="tulaslogo.jpg" alt="Left Logo">
+        <img src="ucostlogo.png" alt="Right Logo">
+    </div>
+
+    <div class="project-title">
+        Energy Efficient APP
+    </div>
+
+    <div class="container">
+        <div id="login-container" class="form-container" style="display: block;">
+            <h2>Login</h2>
+            <div class="input-row"><i>👤</i><input type="text" placeholder="Username"></div>
+            <div class="input-row"><i>🔒</i><input type="password" placeholder="Password"></div>
+            <button class="button">Login</button>
+            <div class="toggle-link">Don't have an account? <a href="#" onclick="toggleForms('register-container')">Register</a></div>
+        </div>
+        
+        <div id="register-container" class="form-container">
+            <h2>Register</h2>
+            <div class="input-row"><i>👤</i><input type="text" placeholder="Full Name"></div>
+            <div class="input-row"><i>📧</i><input type="email" placeholder="Email"></div>
+            <div class="input-row"><i>📞</i><input type="tel" placeholder="Phone Number"></div>
+            <div class="input-row"><i>📍</i><input type="text" value="Uttarakhand" readonly></div>
+            <div class="input-row">
+                <i>🏙️</i>
+                <select>
+                    <option>Select District</option>
+                    <option>Dehradun</option>
+                    <option>Haridwar</option>
+                    <option>Nainital</option>
+                    <option>Almora</option>
+                    <option>Pauri Garhwal</option>
+                    <option>Tehri Garhwal</option>
+                    <option>Udham Singh Nagar</option>
+                    <option>Chamoli</option>
+                    <option>Pithoragarh</option>
+                    <option>Rudraprayag</option>
+                    <option>Champawat</option>
+                    <option>Uttarkashi</option>
+                    <option>Bageshwar</option>
+                </select>
+            </div>
+            <div class="input-row"><i>🔒</i><input type="password" placeholder="New Password"></div>
+            <div class="input-row"><i>🔒</i><input type="password" placeholder="Confirm Password"></div>
+            <button class="button">Register</button>
+            <div class="toggle-link">Already have an account? <a href="#" onclick="toggleForms('login-container')">Login</a></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms(formId) {
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('register-container').style.display = 'none';
+            document.getElementById(formId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
